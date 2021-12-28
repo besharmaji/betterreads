@@ -2,7 +2,9 @@ package com.personal.userBooks;
 
 import java.time.LocalDate;
 import java.util.Optional;
+import java.util.UUID;
 
+import com.datastax.oss.driver.api.core.uuid.Uuids;
 import com.personal.book.Book;
 import com.personal.book.BookRepository;
 import com.personal.user.BooksByUser;
@@ -70,6 +72,7 @@ public class UserBooksController {
         booksByUser.setAuthorNames(book.getAuthorNames());
         booksByUser.setReadingStatus(formData.getFirst("readingStatus"));
         booksByUser.setRating(rating);
+        booksByUser.setTimeUuid(Uuids.timeBased());
         booksByUserRepository.save(booksByUser);
 
 
