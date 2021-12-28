@@ -2,7 +2,6 @@ package com.personal.userBooks;
 
 import java.time.LocalDate;
 import java.util.Optional;
-import java.util.UUID;
 
 import com.datastax.oss.driver.api.core.uuid.Uuids;
 import com.personal.book.Book;
